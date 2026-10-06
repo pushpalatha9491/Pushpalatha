@@ -5,157 +5,497 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Portfolio of Padmanabham Pushpalatha - Software Engineer">
 <title>Padmanabham Pushpalatha | Software Engineer</title>
+
 <style>
 :root{
-  --bg:#07111f; --bg2:#0b1728; --card:rgba(17,31,52,.78); --text:#edf4ff;
-  --muted:#a9b8cc; --accent:#66e3ff; --accent2:#8b7cff; --border:rgba(255,255,255,.10);
-  --shadow:0 20px 60px rgba(0,0,0,.28); --max:1120px;
+  --bg:#07111f;
+  --bg2:#0b1728;
+  --card:rgba(17,31,52,.78);
+  --text:#edf4ff;
+  --muted:#a9b8cc;
+  --accent:#66e3ff;
+  --accent2:#8b7cff;
+  --border:rgba(255,255,255,.10);
+  --shadow:0 20px 60px rgba(0,0,0,.28);
+  --max:1120px;
 }
-*{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:
-radial-gradient(circle at 15% 10%,rgba(102,227,255,.12),transparent 28%),
-radial-gradient(circle at 85% 15%,rgba(139,124,255,.13),transparent 30%),var(--bg);
-color:var(--text);line-height:1.65}
-a{color:inherit;text-decoration:none}.container{width:min(92%,var(--max));margin:auto}
-nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(7,17,31,.72);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
-.nav-inner{height:70px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-weight:800;letter-spacing:.5px}.logo span{color:var(--accent)}
-.nav-links{display:flex;gap:24px;color:var(--muted);font-size:.95rem}
-.nav-links a:hover{color:var(--accent)}
-.hero{min-height:100vh;display:grid;place-items:center;padding-top:70px}
-.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:center}
-.badge{display:inline-block;padding:7px 13px;border:1px solid rgba(102,227,255,.25);border-radius:999px;color:var(--accent);background:rgba(102,227,255,.06);font-size:.85rem}
-h1{font-size:clamp(2.8rem,7vw,5.5rem);line-height:1.02;margin:20px 0 16px;letter-spacing:-3px}
-.gradient{background:linear-gradient(100deg,var(--accent),#b39cff);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{font-size:1.12rem;color:var(--muted);max-width:680px}
-.buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
-.btn{padding:12px 18px;border-radius:12px;border:1px solid var(--border);display:inline-block;font-weight:700}
-.btn.primary{background:linear-gradient(100deg,var(--accent),#8b7cff);color:#06101d;border:0}
-.btn:hover{transform:translateY(-2px)}
-.profile-card{background:linear-gradient(145deg,rgba(102,227,255,.10),rgba(139,124,255,.10)),var(--card);border:1px solid var(--border);border-radius:28px;padding:30px;box-shadow:var(--shadow)}
-.avatar{width:110px;height:110px;border-radius:50%;display:grid;place-items:center;font-size:2.2rem;font-weight:800;
-background:linear-gradient(135deg,var(--accent),var(--accent2));color:#07111f;margin-bottom:22px}
-.contact{display:grid;gap:10px;color:var(--muted);font-size:.94rem}
-section{padding:100px 0}.section-head{margin-bottom:35px}
-.eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:2px;font-size:.78rem;font-weight:800}
-h2{font-size:2.35rem;margin:7px 0}.lead{color:var(--muted);max-width:760px}
-.grid{display:grid;gap:20px}.projects{grid-template-columns:repeat(2,1fr)}
-.card{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:25px;box-shadow:var(--shadow)}
-.card h3{margin-top:0;font-size:1.3rem}.card p{color:var(--muted)}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.tag{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.06);color:#dbe8f8;font-size:.78rem}
-.skills{grid-template-columns:repeat(4,1fr)}.skill{padding:18px;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.03);color:#dbe8f8}
-.timeline{display:grid;gap:16px}.timeline-item{position:relative;padding:22px 22px 22px 28px;border-left:2px solid rgba(102,227,255,.4);background:rgba(255,255,255,.025);border-radius:0 16px 16px 0}
-.timeline-item h3{margin:0 0 5px}.meta{color:var(--accent);font-size:.85rem}
-.two{grid-template-columns:1fr 1fr}.contact-box{display:grid;gap:14px}.contact-item{padding:18px;border:1px solid var(--border);border-radius:15px;color:var(--muted)}
-footer{padding:35px 0;border-top:1px solid var(--border);color:var(--muted);text-align:center}
-@media(max-width:850px){.hero-grid,.projects,.two{grid-template-columns:1fr}.skills{grid-template-columns:repeat(2,1fr)}.nav-links{display:none}h1{letter-spacing:-2px}}
-@media(max-width:480px){.skills{grid-template-columns:1fr}.profile-card{padding:22px}}
+
+*{
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Arial,sans-serif;
+  background:
+  radial-gradient(circle at 15% 10%,rgba(102,227,255,.12),transparent 28%),
+  radial-gradient(circle at 85% 15%,rgba(139,124,255,.13),transparent 30%),
+  var(--bg);
+  color:var(--text);
+  line-height:1.65;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+  width:min(92%,var(--max));
+  margin:auto;
+}
+
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:20;
+  background:rgba(7,17,31,.72);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+}
+
+.nav-inner{
+  height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-weight:800;
+  letter-spacing:.5px;
+}
+
+.logo span{
+  color:var(--accent);
+}
+
+.nav-links{
+  display:flex;
+  gap:24px;
+  color:var(--muted);
+  font-size:.95rem;
+}
+
+.nav-links a:hover{
+  color:var(--accent);
+}
+
+/* Resume button in navbar */
+.nav-resume{
+  padding:9px 16px;
+  border-radius:10px;
+  background:linear-gradient(100deg,var(--accent),var(--accent2));
+  color:#06101d !important;
+  font-weight:800;
+}
+
+.nav-resume:hover{
+  transform:translateY(-2px);
+  color:#06101d !important;
+}
+
+.hero{
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  padding-top:70px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  gap:55px;
+  align-items:center;
+}
+
+.badge{
+  display:inline-block;
+  padding:7px 13px;
+  border:1px solid rgba(102,227,255,.25);
+  border-radius:999px;
+  color:var(--accent);
+  background:rgba(102,227,255,.06);
+  font-size:.85rem;
+}
+
+h1{
+  font-size:clamp(2.8rem,7vw,5.5rem);
+  line-height:1.02;
+  margin:20px 0 16px;
+  letter-spacing:-3px;
+}
+
+.gradient{
+  background:linear-gradient(100deg,var(--accent),#b39cff);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.hero p{
+  font-size:1.12rem;
+  color:var(--muted);
+  max-width:680px;
+}
+
+.buttons{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+
+.btn{
+  padding:12px 18px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  display:inline-block;
+  font-weight:700;
+}
+
+.btn.primary{
+  background:linear-gradient(100deg,var(--accent),#8b7cff);
+  color:#06101d;
+  border:0;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.profile-card{
+  background:
+  linear-gradient(145deg,rgba(102,227,255,.10),rgba(139,124,255,.10)),
+  var(--card);
+  border:1px solid var(--border);
+  border-radius:28px;
+  padding:30px;
+  box-shadow:var(--shadow);
+}
+
+.avatar{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-size:2.2rem;
+  font-weight:800;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#07111f;
+  margin-bottom:22px;
+}
+
+.contact{
+  display:grid;
+  gap:10px;
+  color:var(--muted);
+  font-size:.94rem;
+}
+
+section{
+  padding:100px 0;
+}
+
+.section-head{
+  margin-bottom:35px;
+}
+
+.eyebrow{
+  color:var(--accent);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:.78rem;
+  font-weight:800;
+}
+
+h2{
+  font-size:2.35rem;
+  margin:7px 0;
+}
+
+.lead{
+  color:var(--muted);
+  max-width:760px;
+}
+
+.grid{
+  display:grid;
+  gap:20px;
+}
+
+.projects{
+  grid-template-columns:repeat(2,1fr);
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:25px;
+  box-shadow:var(--shadow);
+}
+
+.card h3{
+  margin-top:0;
+  font-size:1.3rem;
+}
+
+.card p{
+  color:var(--muted);
+}
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:18px;
+}
+
+.tag{
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.06);
+  color:#dbe8f8;
+  font-size:.78rem;
+}
+
+.skills{
+  grid-template-columns:repeat(4,1fr);
+}
+
+.skill{
+  padding:18px;
+  border:1px solid var(--border);
+  border-radius:16px;
+  background:rgba(255,255,255,.03);
+  color:#dbe8f8;
+}
+
+.timeline{
+  display:grid;
+  gap:16px;
+}
+
+.timeline-item{
+  position:relative;
+  padding:22px 22px 22px 28px;
+  border-left:2px solid rgba(102,227,255,.4);
+  background:rgba(255,255,255,.025);
+  border-radius:0 16px 16px 0;
+}
+
+.timeline-item h3{
+  margin:0 0 5px;
+}
+
+.meta{
+  color:var(--accent);
+  font-size:.85rem;
+}
+
+.two{
+  grid-template-columns:1fr 1fr;
+}
+
+.contact-box{
+  display:grid;
+  gap:14px;
+}
+
+.contact-item{
+  padding:18px;
+  border:1px solid var(--border);
+  border-radius:15px;
+  color:var(--muted);
+}
+
+footer{
+  padding:35px 0;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+  text-align:center;
+}
+
+@media(max-width:850px){
+  .hero-grid,
+  .projects,
+  .two{
+    grid-template-columns:1fr;
+  }
+
+  .skills{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  h1{
+    letter-spacing:-2px;
+  }
+}
+
+@media(max-width:480px){
+  .skills{
+    grid-template-columns:1fr;
+  }
+
+  .profile-card{
+    padding:22px;
+  }
+}
 </style>
 </head>
+
 <body>
-<nav><div class="container nav-inner">
-  <a class="logo" href="#home">P<span>P</span></a>
-  <div class="nav-links">
-    <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
-    <a href="#education">Education</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+
+<nav>
+  <div class="container nav-inner">
+
+    <a class="logo" href="#home">
+      P<span>P</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+
+      <!-- Resume button -->
+      <a href="resume.html" class="nav-resume">Resume</a>
+    </div>
+
   </div>
-</div></nav>
+</nav>
 
 <main>
+
 <section class="hero" id="home">
-<div class="container hero-grid">
-  <div>
-    <span class="badge">Software Engineer • CSE Undergraduate</span>
-    <h1>Hi, I'm <span class="gradient">Pushpalatha.</span></h1>
-    <p>Computer Science and Engineering undergraduate building practical solutions across web development, backend systems, databases, cybersecurity, networking, and AI.</p>
-    <div class="buttons">
-      <a class="btn primary" href="#projects">View Projects</a>
-      <a class="btn" href="mailto:pushpapadmanabham33@gmail.com">Contact Me</a>
+
+  <div class="container hero-grid">
+
+    <div>
+
+      <span class="badge">
+        Software Engineer • CSE Undergraduate
+      </span>
+
+      <h1>
+        Hi, I'm <span class="gradient">Pushpalatha.</span>
+      </h1>
+
+      <p>
+        Computer Science and Engineering undergraduate building practical
+        solutions across web development, backend systems, databases,
+        cybersecurity, networking, and AI.
+      </p>
+
+      <div class="buttons">
+
+        <a class="btn primary" href="#projects">
+          View Projects
+        </a>
+
+        <!-- View Resume button -->
+        <a class="btn" href="resume.html">
+          View Resume
+        </a>
+
+        <a class="btn" href="mailto:pushpapadmanabham33@gmail.com">
+          Contact Me
+        </a>
+
+      </div>
+
     </div>
+
+    <aside class="profile-card">
+
+      <div class="avatar">
+        PP
+      </div>
+
+      <h2>
+        Padmanabham<br>
+        Pushpalatha
+      </h2>
+
+      <div class="contact">
+
+        <div>
+          📧 pushpapadmanabham33@gmail.com
+        </div>
+
+        <div>
+          📱 9491611388
+        </div>
+
+        <div>
+          🎓 B.Tech — Computer Science & Engineering
+        </div>
+
+        <div>
+          📊 CGPA: 8.01
+        </div>
+
+      </div>
+
+    </aside>
+
   </div>
-  <aside class="profile-card">
-    <div class="avatar">PP</div>
-    <h2>Padmanabham<br>Pushpalatha</h2>
-    <div class="contact">
-      <div>📧 pushpapadmanabham33@gmail.com</div>
-      <div>📱 9491611388</div>
-      <div>🎓 B.Tech — Computer Science & Engineering</div>
-      <div>📊 CGPA: 8.01</div>
-    </div>
-  </aside>
-</div>
+
 </section>
 
-<section id="about"><div class="container">
-<div class="section-head"><div class="eyebrow">About Me</div><h2>Building with curiosity and purpose.</h2></div>
-<div class="card">
-<p class="lead">I am a Computer Science and Engineering undergraduate with hands-on experience in Java, Python, HTML, CSS, JavaScript, SQL, and database management. My academic work includes web development, backend integration, and database systems, while internships and virtual programs have provided practical exposure to cybersecurity, networking, and AI tools.</p>
-<p class="lead">I am seeking an entry-level Software Developer or Full-Stack Developer role where I can apply programming and problem-solving skills, learn quickly, and contribute to meaningful products.</p>
-</div>
-</div></section>
 
-<section id="skills"><div class="container">
-<div class="section-head"><div class="eyebrow">Toolkit</div><h2>Skills</h2></div>
-<div class="grid skills">
-  <div class="skill">C</div><div class="skill">Python</div><div class="skill">Java</div><div class="skill">HTML</div>
-  <div class="skill">CSS</div><div class="skill">JavaScript</div><div class="skill">Flask</div><div class="skill">SQL</div>
-  <div class="skill">DBMS</div><div class="skill">Computer Networks</div><div class="skill">Operating Systems</div><div class="skill">Data Structures</div>
-  <div class="skill">Git / GitHub</div><div class="skill">VS Code</div><div class="skill">Eclipse</div><div class="skill">Problem Solving</div>
-  <div class="skill">Debugging</div><div class="skill">Teamwork</div><div class="skill">Communication</div><div class="skill">Quick Learning</div>
-</div></div></section>
+<section id="about">
 
-<section id="projects"><div class="container">
-<div class="section-head"><div class="eyebrow">Selected Work</div><h2>Projects</h2><p class="lead">Academic projects focused on secure systems, web applications, backend integration, and database management.</p></div>
-<div class="grid projects">
-  <article class="card">
-    <h3>Zero Trust AI Assistant for Network Security</h3>
-    <p>A cybersecurity AI assistant implementing Zero Trust principles. The project provides security-aware assistance and supports network security tasks through a web-based interface.</p>
-    <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">MySQL</span><span class="tag">Cybersecurity</span></div>
-  </article>
-  <article class="card">
-    <h3>Smart Management and Grievance System</h3>
-    <p>A web application for organized submission, tracking, and management of user grievances, with registration, status tracking, and administrator management features.</p>
-    <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">MySQL</span></div>
-  </article>
-</div></div></section>
+  <div class="container">
 
-<section id="education"><div class="container">
-<div class="section-head"><div class="eyebrow">Academic Journey</div><h2>Education</h2></div>
-<div class="timeline">
-  <div class="timeline-item"><div class="meta">2024 – Present</div><h3>B.Tech — Computer Science and Engineering</h3><div>Lendi Institute of Engineering and Technology</div><p class="lead">CGPA: 8.01</p></div>
-  <div class="timeline-item"><div class="meta">Intermediate</div><h3>12th Class — Sri Chaitanya Junior College</h3><div>Board of Intermediate Education, AP</div><p class="lead">93%</p></div>
-  <div class="timeline-item"><div class="meta">SSC</div><h3>10th Class — ZPHIGHSCHOOL (KOTTAKKI)</h3><div>State Board</div><p class="lead">88%</p></div>
-</div></div></section>
+    <div class="section-head">
+      <div class="eyebrow">About Me</div>
 
-<section id="experience"><div class="container">
-<div class="section-head"><div class="eyebrow">Professional Exposure</div><h2>Internships & Certifications</h2></div>
-<div class="grid two">
-  <div class="card"><h3>Internships</h3>
-    <div class="timeline">
-      <div class="timeline-item"><h3>Palo Alto Cybersecurity</h3><div class="meta">EduSkills</div></div>
-      <div class="timeline-item"><h3>Zscaler Networking</h3><div class="meta">EduSkills</div></div>
-      <div class="timeline-item"><h3>Prompt Engineering for AI</h3><div class="meta">EduSkills</div></div>
+      <h2>
+        Building with curiosity and purpose.
+      </h2>
     </div>
-  </div>
-  <div class="card"><h3>Certifications</h3>
-    <div class="timeline">
-      <div class="timeline-item"><h3>The Joy of Computing using Python</h3><div class="meta">NPTEL</div></div>
-      <div class="timeline-item"><h3>Introduction to Internet of Things</h3><div class="meta">NPTEL</div></div>
-      <div class="timeline-item"><h3>AWS Generative AI</h3><div class="meta">Certification / Virtual Program listed in resume</div></div>
+
+    <div class="card">
+
+      <p class="lead">
+        I am a Computer Science and Engineering undergraduate with
+        hands-on experience in Java, Python, HTML, CSS, JavaScript,
+        SQL, and database management. My academic work includes web
+        development, backend integration, and database systems, while
+        internships and virtual programs have provided practical
+        exposure to cybersecurity, networking, and AI tools.
+      </p>
+
+      <p class="lead">
+        I am seeking an entry-level Software Developer or Full-Stack
+        Developer role where I can apply programming and problem-solving
+        skills, learn quickly, and contribute to meaningful products.
+      </p>
+
     </div>
+
   </div>
-</div></div></section>
 
-<section id="contact"><div class="container">
-<div class="section-head"><div class="eyebrow">Let's Connect</div><h2>Open to opportunities.</h2><p class="lead">Interested in entry-level Software Developer and Full-Stack Developer opportunities.</p></div>
-<div class="grid two contact-box">
-  <a class="contact-item" href="mailto:pushpapadmanabham33@gmail.com">📧 <strong>Email</strong><br>pushpapadmanabham33@gmail.com</a>
-  <a class="contact-item" href="tel:+919491611388">📱 <strong>Phone</strong><br>9491611388</a>
-  <div class="contact-item">🌐 <strong>Languages</strong><br>Telugu • English</div>
-  <div class="contact-item">💡 <strong>Strengths</strong><br>Problem solving • Debugging • Teamwork • Communication • Quick learning</div>
-</div></div></section>
-</main>
+</section>
 
-<footer>© 2026 Padmanabham Pushpalatha · Software Engineer Portfolio</footer>
-</body>
-</html>
+
+<section id="skills">
+
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">Toolkit</div>
+      <
